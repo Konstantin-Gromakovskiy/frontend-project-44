@@ -13,15 +13,15 @@ const getQuestionAndAnswer = () => {
   switch (randomSymbol) {
     case '+':
       answer = randomNumber1 + randomNumber2;
-      question = `${randomNumber1}+${randomNumber2}`;
+      question = `${randomNumber1} + ${randomNumber2}`;
       break;
     case '-':
       answer = randomNumber1 - randomNumber2;
-      question = `${randomNumber1}-${randomNumber2}`;
+      question = `${randomNumber1} - ${randomNumber2}`;
       break;
     default:
       answer = randomNumber1 * randomNumber2;
-      question = `${randomNumber1}*${randomNumber2}`;
+      question = `${randomNumber1} * ${randomNumber2}`;
   }
 
   return [question, answer.toString()];
