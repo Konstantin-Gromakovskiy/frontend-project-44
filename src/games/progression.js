@@ -10,7 +10,7 @@ const getQuestionAndAnswer = () => {
 
   for (let i = 1; i < 11; i += 1) {
     // if (i !== space) { progressionArr.push(step * i); } else { progressionArr.push('..'); }
-    if (i !== space) { question = `${question}${step * i} `; } else { question = `${question} ..`; }
+    if (i !== space) { question = `${question}${step * i} `; } else { question = `${question}.. `; }
   }
 
   return [question, answer.toString()];
