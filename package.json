@@ -1,8 +1,8 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Konstantin-Gromakovskiy/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Konstantin-Gromakovskiy/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Brain-games is a set of 5 console games (brain-calc, brain-even, brain-prime, brain-gcd, brain-progression. A user answers a series of three questions about math. After three correct answers in a row, the game is considered completed.",
+  "main": "src/index.js",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",

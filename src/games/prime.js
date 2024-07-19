@@ -1,16 +1,22 @@
 import game from '../index.js';
+import generateRandomNumber from '../randomNumber.js';
 
 const instruction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  const randomNumber = Math.floor(Math.random() * 99) + 2;
-  let answer = 'yes';
-  for (let i = 2; i < randomNumber; i += 1) {
-    if (randomNumber % i === 0) {
-      answer = 'no';
-      break;
+  const randomNumber = generateRandomNumber(0, 100);
+
+  const isPrime = (number) => {
+    let answer = 'yes';
+    for (let i = 2; i < number; i += 1) {
+      if (number % i === 0) {
+        answer = 'no';
+      }
     }
-  }
+    return answer;
+  };
+
+  const answer = (isPrime(randomNumber).toString());
   const question = randomNumber;
 
   return [question, answer];

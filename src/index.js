@@ -7,7 +7,9 @@ export default (instruction, getQuestionAndAnswer) => {
 
   console.log(instruction);
 
-  for (let i = 0; i < 3; i += 1) {
+  const roundsCount = 3;
+
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, answer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer ');
@@ -17,9 +19,9 @@ export default (instruction, getQuestionAndAnswer) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
-      break;
+      return;
     }
-
-    if (i === 2) { console.log(`Congratulations, ${name}!`); }
   }
+
+  console.log(`Congratulations, ${name}!`);
 };

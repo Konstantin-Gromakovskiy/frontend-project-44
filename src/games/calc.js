@@ -1,30 +1,29 @@
 import game from '../index.js';
+import generateRandomNumber from '../randomNumber.js';
 
 const instruction = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = () => {
   const symbols = ['+', '-', '*'];
-  const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
-  const randomNumber1 = Math.floor(Math.random() * 10);
-  const randomNumber2 = Math.floor(Math.random() * 10);
-  let question = '';
-  let answer;
+  const randomSymbolIndex = generateRandomNumber(0, symbols.length - 1);
+  const randomSymbol = symbols[randomSymbolIndex];
+  const randomNumber1 = generateRandomNumber(1, 10);
+  const randomNumber2 = generateRandomNumber(1, 10);
 
-  switch (randomSymbol) {
-    case '+':
-      answer = randomNumber1 + randomNumber2;
-      question = `${randomNumber1} + ${randomNumber2}`;
-      break;
-    case '-':
-      answer = randomNumber1 - randomNumber2;
-      question = `${randomNumber1} - ${randomNumber2}`;
-      break;
-    default:
-      answer = randomNumber1 * randomNumber2;
-      question = `${randomNumber1} * ${randomNumber2}`;
-  }
+  const calculate = (number1, number2, symbol) => {
+    switch (symbol) {
+      case '+':
+        return number1 + number2;
+      case '-':
+        return number1 - number2;
+      default:
+        return number1 * number2;
+    }
+  };
 
-  return [question, answer.toString()];
+  const question = `${randomNumber1} ${randomSymbol} ${randomNumber2}`;
+  const answer = (calculate(randomNumber1, randomNumber2, randomSymbol)).toString();
+  return [question, answer];
 };
 
 export default () => {
