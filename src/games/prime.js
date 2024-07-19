@@ -4,7 +4,7 @@ import generateRandomNumber from '../randomNumber.js';
 const instruction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  const randomNumber = generateRandomNumber(0, 100);
+  const randomNumber = generateRandomNumber(1, 100);
 
   const isPrime = (number) => {
     let answer = 'yes';
