@@ -1,7 +1,12 @@
-### Hexlet tests and linter status:
+### Status badge:
 [![Actions Status](https://github.com/Konstantin-Gromakovskiy/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Konstantin-Gromakovskiy/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/87b9819edac7c7b12553/maintainability)](https://codeclimate.com/github/Konstantin-Gromakovskiy/frontend-project-44/maintainability)
-## Installing
+
+## Description
+This is a console application on node.js built on the principle of popular mobile applications for brain pumping. Each game asks questions that need to be answered correctly. After three correct answers, it is considered that the game is over. Incorrect answers end the game and offer to go through it again. To communicate with the user, the readline-sync library was used to read user input.
+
+
+### Installing
 
 Using npm:
 ```bash
